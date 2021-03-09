@@ -1,51 +1,150 @@
+/* general screen layout */
+
 .pageContainer {
   /* Split screen/Desktop */
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  height: 100%; 
-  min-height: 100vh;
-  background-color: aquamarine;
-
-}
-
-.gridContainer {
-  /* Split screen/Desktop */
-  display: grid;
-  grid-template-columns: 40% auto;
-  grid-column-gap: 0px;
-  grid-row-gap: 0%;
-  justify-items: stretch;
-  background-color: aquamarine;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .signupContainer {
-  display: flex;
-  flex-direction: column !important;
-  align-items:center;
-  padding: 1em 3em 4em;
-  /* debug CSS */
-  background-color: greenyellow;
-  border: medium solid red;
-}
-
-.formContainer {
+  width: 650px;
+  background-color: #E5E5E5;
   display:flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   align-items:center;
   justify-content: center;
-  background-color:blue;
+  margin-bottom: 100px;
 }
 
 .spaceshipContainer {
+  display: flex;
+  height: 100%;
   margin: 0;
-  min-width: 100%;
-  min-height: 100%;
+  background-color: aqua;
+  overflow: hidden;
+}
+
+.spaceshipImg {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  
+}
+
+.header {
+  /* 'Sign up to BaseGit' and it's subtitle */
+  display: flex;
+  flex-direction: column;
+  width: 300px;
 }
 
 .headline {
+  /* 'Sign up to BaseGit' */
+  margin: 8px 0px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 800; 
+}
 
-  font-weight: 800;
+.subHeadline {
+  /* 'BaseGit is the best way to store information.' */
+  color: #4B5563;
+  font-size: 14px;
+}
+
+/* buttons and subtitle */
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.buttonsContainer > button {
+  /* gray/300 */
+  width: 120px;
+  height: 38px;
+  border: 1px solid #D1D5DB;
+  box-sizing: border-box;
+  /* shadow/sm */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  
+
+}
+
+.facebookButton {
+  background: #FFFFFF url('/public/facebook-icon.png');
+}
+
+.twitterButton {
+  margin: 0 10px 4px;
+}
+
+.githubButton {
+  
+}
+
+/* Sign Up form */
+.workEmailLabel {
+  /* 'Or with your work email label' */
+  color: #6B7280;
+  text-align: center;
+  border-bottom: 1px solid #D1D5DB; 
+  line-height: 0.1em;
+}
+
+.signupContainer form input[type="text"],
+.signupContainer form input[type="email"],
+.signupContainer form input[type="password"] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid #c4c4c4;
+  padding: 1em;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.signupContainer label {
+  font: optional;
+  display: blocK;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #374151;
+
+}
+
+
+.workEmailLabel span { 
+    background:#E5E5E5;
+    padding:0 10px; 
+}
+
+.signupButton {
+  color: white;
+  background-color: black;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  width: 100%;
+  height: 40px;
+  /* shadow/sm */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* media queries */
+
+@media only screen and  (max-width: 800px) {
+  .spaceshipContainer {
+    display: none;
+  }
+  .signupContainer {
+    width: 100%;
+  }
 }
