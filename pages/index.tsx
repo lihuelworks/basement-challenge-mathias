@@ -1,5 +1,12 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faGithub,
+  faFacebook,
+  faTwitter
+} from '@fortawesome/free-brands-svg-icons';
 
 export default function Home() {
     return (
@@ -9,7 +16,7 @@ export default function Home() {
                 <title>Make a BaseGit account</title>
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;800' rel="stylesheet"></link>
+                <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800' rel="stylesheet"></link>
             </Head>
 
             <main className={styles.pageContainer}>
@@ -20,12 +27,15 @@ export default function Home() {
                             <h1 className={styles.headline}>Sign up to BaseGit</h1>
                             <p className={styles.subHeadline}>BaseGit is the best way to store information.</p>
                         </section>
-                        <p> Continue with a provider</p>
+                        <p className={styles.providerLine}> Continue with a provider</p>
                         <section className={styles.buttonsContainer}>
-                            <button className={`${styles.facebookButton} ${styles.Button}`} type="submit" name="facebook" value="facebook">
+                            <button className={styles.facebookButton} type="submit" name="facebook" value="facebook">
+                                <FontAwesomeIcon icon={faFacebook} style={{ width: '400px'}}/>
                             </button>
                             <button className={styles.twitterButton} type="submit" name="twitter" value="twitter"></button>
-                            <button className={styles.githubButton}type="submit" name="github" value="github"></button>
+                            <button className={styles.githubButton} type="submit" name="github" value="github">
+                                <div></div>
+                            </button>
                         </section>
                         <p className={styles.workEmailLabel}>
                             <span>

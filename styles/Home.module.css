@@ -11,7 +11,6 @@
 
 .signupContainer {
   width: 650px;
-  background-color: #E5E5E5;
   display:flex;
   flex-direction: column;
   align-items:center;
@@ -79,7 +78,6 @@
 }
 
 .facebookButton {
-  background: #FFFFFF url('/public/facebook-icon.png');
 }
 
 .twitterButton {
@@ -97,6 +95,11 @@
   text-align: center;
   border-bottom: 1px solid #D1D5DB; 
   line-height: 0.1em;
+}
+
+.workEmailLabel span { 
+  background:#FFFFFF;
+  padding:0 10px; 
 }
 
 .signupContainer form input[type="text"],
@@ -121,11 +124,6 @@
 
 }
 
-
-.workEmailLabel span { 
-    background:#E5E5E5;
-    padding:0 10px; 
-}
 
 .signupButton {
   color: white;
