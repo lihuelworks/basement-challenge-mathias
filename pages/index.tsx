@@ -30,11 +30,13 @@ export default function Home() {
                         <p className={styles.providerLine}> Continue with a provider</p>
                         <section className={styles.buttonsContainer}>
                             <button className={styles.facebookButton} type="submit" name="facebook" value="facebook">
-                                <FontAwesomeIcon icon={faFacebook} style={{ width: '400px'}}/>
+                                <FontAwesomeIcon icon={faFacebook} style={{ color: '#6B7280', fontSize: '20px'}}/>
                             </button>
-                            <button className={styles.twitterButton} type="submit" name="twitter" value="twitter"></button>
+                            <button className={styles.twitterButton} type="submit" name="twitter" value="twitter">
+                                <FontAwesomeIcon icon={faTwitter} style={{ color: '#6B7280', fontSize: '20px'}}/>
+                            </button>
                             <button className={styles.githubButton} type="submit" name="github" value="github">
-                                <div></div>
+                                <FontAwesomeIcon icon={faGithub} style={{ color: '#6B7280', fontSize: '20px'}}/>
                             </button>
                         </section>
                         <p className={styles.workEmailLabel}>
