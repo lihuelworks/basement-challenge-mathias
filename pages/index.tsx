@@ -92,8 +92,14 @@ export default function Home() {
             </form>
           </section>
         </div>
-        <div className={styles.spaceshipContainer}>
-          <img className={styles.spaceshipImg} src="spaceship-cover.png" alt="an image of a spaceship" />
+          <div className={styles.spaceshipContainer}>
+            <div className={styles.stars}></div>
+            <div className={styles.twinkling}></div>
+            <div className={styles.clouds}></div>
+            <div className={styles.spaceshipWrapper}>
+              <img className={`${styles.spaceship} ${styles.floating}`}
+            src="https://imgur.com/ezirliB.png" alt="an image of a spaceship" />
+            </div>
         </div>
       </main>
     </div>
